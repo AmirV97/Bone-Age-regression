@@ -1,6 +1,7 @@
 import torch
 from torch.utils.data import Dataset
 import numpy as np
+from PIL import Image
 
 class BR_DS(Dataset):
     def __init__(self, list_, transform=None):
