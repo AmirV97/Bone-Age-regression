@@ -1,0 +1,15 @@
+name: bone_age_regression
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - torch=2.1.2
+  - albumentations=1.4.0
+  - scikit-learn=1.2.2
+  - matplotlib=3.7.5
+  - wandb=0.17.0
+  - tqdm=4.66.4
+  - numpy=1.26.4
+  - transformers=4.41.2
+  - pandas=2.2.2
