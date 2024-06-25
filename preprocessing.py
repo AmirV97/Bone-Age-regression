@@ -30,9 +30,7 @@ preprocessing = A.Compose([
     A.LongestMaxSize(max_size=500, interpolation=1),
     A.PadIfNeeded(min_height=500, min_width=500, border_mode=0, value=(0)),
     A.CLAHE(p=1.0),
-#     A.Normalize(mean=(0.2304), std=(0.2135)),
     A.ToFloat(),
-#     ToTensorV2()
 ])
 
 train_dir = '/kaggle/input/rsna-bone-age/RSNA_train/images'
@@ -46,7 +44,6 @@ datasets = [train_ds, val_ds, test_ds]
 filenames = ['train_ds.pkl', 'val_ds.pkl', 'test_ds.pkl']
 for dataset, filename in zip(datasets, filenames):
     subjects = []
-#     loader = DataLoader(dataset, batch_size=1, num_workers=4)
     for subject in tqdm(dataset):
         subjects.append(subject)
     with open(filename, 'wb') as file:
