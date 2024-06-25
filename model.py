@@ -1,5 +1,6 @@
 import torch
 import  torch.nn as nn
+import transformers
 
 
 class Regressor_head(nn.Sequential):
